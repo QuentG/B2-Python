@@ -5,12 +5,9 @@
 #Gans Quentin
 #15/10/18
 
+#Import
 import operator
 
-#Variables qu'on aime tant <3
-dict = {}
-tour = 0
-sum = 0
 
 #Fonction qui check l'input d'un nombre
 def inputNote():
@@ -29,6 +26,11 @@ def inputPrenom():
   while(nom.isalnum() == False):
     nom = input('Entrez un prenom avec des lettres : ')
   return str(nom) 
+
+#Variables qu'on aime tant <3
+dict = {}
+tour = 0
+sum = 0
 
 #Tant que tour est égale a 0
 while tour == 0:
