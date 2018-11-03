@@ -9,11 +9,6 @@
 import random
 import signal
 
-#Fonction qui affiche la solution et au revoir
-def message():
-    return write_in_file('A la prochaine ! - La solution était', str(nbr))
-    exit()
-
 #Fonction qui écrit dans un fichier
 def write_in_file(msg):
   file = open(path_file, "w")
@@ -66,6 +61,5 @@ while (saisi != nbr and end == False):
     saisi = checkNumber()
     result = game()
     write_in_file(result)
-    write_in_file(message())
 
         
