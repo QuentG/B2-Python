@@ -49,7 +49,8 @@ while end is False :
     if re.match("^[0-9]+$", saisi):
         saisi = int(saisi)
         #Et qu'il ne soit pas au dessus de 100
-        if saisi > 100:
+        if saisi < 0 and saisi > 100:
+            write_in_file('Entrez un nombre entre 0 et 100 ! : ')
             continue          
         if saisi > nbr :
             write_in_file('Trop grand !')       
