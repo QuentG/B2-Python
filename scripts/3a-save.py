@@ -3,7 +3,7 @@
 # Name: 3a-save
 # Description: Script qui permet d'effectuer une sauvegarde.
 # Date: 05/10/18
-# Gans Quentin
+# Gans Quentin / Axel Paris
 
 # Import des modules
 import signal
