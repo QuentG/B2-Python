@@ -13,6 +13,7 @@ import os
 import sys
 import subprocess
 
+# Fonction qui cree une archive
 def createArchive():
     os.remove(path_data + '/archive.tar.gz')
     shutil.move(archive + '.tar.gz', path_data)
