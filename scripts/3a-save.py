@@ -13,15 +13,18 @@ import os
 import sys
 import subprocess
 
+
 # Fonction qui cree une archive
 def createArchive():
     os.remove(path_data + '/archive.tar.gz')
     shutil.move(archive + '.tar.gz', path_data)
 
+
 # Fontion qui supprime l'archive déjà existante
 def supprArchive():
     if os.path.exists(archive + '.tar.gz'):
         os.remove(archive + '.tar.gz')
+
 
 # Fonction qui quitte proprement le prog
 def end_prog(sig, frame):
