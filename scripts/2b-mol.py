@@ -1,6 +1,6 @@
 #!/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6
 
-# 2b-mol
+# Name : 2b-mol
 # Description : Resolution du 2a
 # Date : 09/11/18
 # Gans Quentin
