@@ -1,7 +1,7 @@
 #!/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6
 
-# Name: 3a-save
-# Description: Script qui permet d'effectuer une sauvegarde.
+# Name: 3b-opt.py
+# Description: Script qui permet d'effectuer une sauvegarde sur N repertoires
 # Date: 05/10/18
 # Gans Quentin / Axel Paris
 
