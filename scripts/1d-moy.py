@@ -10,18 +10,6 @@ import random
 import re
 import signal
 
-# Variables
-coups = 0
-end = False
-nbr = random.randint(0, 100)
-
-
-# Fonction qui affiche la solution et au revoir
-def message():
-    return print('A la prochaine ! - La solution était', str(nbr))
-    exit()
-
-
 # Fonction qui quitte le prog si on CTRL+C
 def end_game(sig, frame):
     print('\nPas ouf de CTRL+C ')
@@ -30,6 +18,20 @@ def end_game(sig, frame):
 
 # Si il CTRL+C
 signal.signal(signal.SIGINT, end_game)
+
+
+
+# Fonction qui affiche la solution et au revoir
+def message():
+    return print('A la prochaine ! - La solution était', str(nbr))
+    exit()
+
+
+# Variables
+coups = 0
+end = False
+nbr = random.randint(0, 100)
+
 
 # Logique du jeu
 while end is False:

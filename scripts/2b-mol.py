@@ -11,6 +11,16 @@ import random
 import time
 
 
+# Fonction qui quitte le prog si on CTRL+C
+def end_game(sig, frame):
+    write_in_file('Pas ouf de CTRL+C ')
+    exit()
+
+
+# Si il CTRL+C
+signal.signal(signal.SIGINT, end_game)
+
+
 # Fonction qui affiche la solution et au revoir
 def message():
     write_in_file('A la prochaine ! - La solution était', str(nbr))
@@ -31,15 +41,6 @@ def read_in_file():
     file.close()
     return msg
 
-
-# Fonction qui quitte le prog si on CTRL+C
-def end_game(sig, frame):
-    write_in_file('Pas ouf de CTRL+C ')
-    exit()
-
-
-# Si il CTRL+C
-signal.signal(signal.SIGINT, end_game)
 
 
 # Variables

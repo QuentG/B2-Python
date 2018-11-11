@@ -14,6 +14,15 @@ import sys
 import subprocess
 
 
+# Fonction qui quitte proprement le prog
+def end_prog(sig, frame):
+    supprArchive()
+    sys.exit(0)
+
+
+signal.signal(signal.SIGINT, end_prog)
+
+
 # Fonction qui cree une archive
 def createArchive():
     os.remove(path_data + '/archive.tar.gz')
@@ -26,13 +35,6 @@ def supprArchive():
         os.remove(archive + '.tar.gz')
 
 
-# Fonction qui quitte proprement le prog
-def end_prog(sig, frame):
-    supprArchive()
-    sys.exit(0)
-
-
-signal.signal(signal.SIGINT, end_prog)
 
 # Variables
 path_data = os.path.expanduser('~/data/')

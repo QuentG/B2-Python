@@ -11,6 +11,16 @@ import re
 import signal
 
 
+# Fonction qui quitte le prog si on CTRL+C
+def end_game(sig, frame):
+    write_in_file('Pas ouf de CTRL+C ')
+    exit()
+
+
+# Si il CTRL+C
+signal.signal(signal.SIGINT, end_game)
+
+
 # Fonction qui affiche la solution et au revoir
 def message():
     write_in_file('A la prochaine ! - La solution était', str(nbr))
@@ -32,20 +42,13 @@ def read_in_file():
     return msg
 
 
-# Fonction qui quitte le prog si on CTRL+C
-def end_game(sig, frame):
-    write_in_file('Pas ouf de CTRL+C ')
-    exit()
-
-
-# Si il CTRL+C
-signal.signal(signal.SIGINT, end_game)
-
 # Variables
 end = False
 nbr = random.randint(0, 100)
 
+
 write_in_file('Bonjour, entrez un nombre entre 0 et 100 ! : ')
+
 
 # Logique du jeu
 while end is False:

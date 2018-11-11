@@ -10,9 +10,6 @@ import re
 # Regex qui check si c'est un int
 regex = re.compile('[0-9]+$')
 
-numb1 = input('Entrez un premier nombre : ')
-numb2 = input('Entrez un deuxieme nombre : ')
-
 
 # Fontion qui affiche l'addition des 2 nombres saisi
 def addition(nb1, nb2):
@@ -22,6 +19,9 @@ def addition(nb1, nb2):
     else:
         print('Pas un nombre sorry')
 
+
+numb1 = input('Entrez un premier nombre : ')
+numb2 = input('Entrez un deuxieme nombre : ')
 
 # On affiche tous ça
 print(addition(numb1, numb2))
