@@ -1,4 +1,4 @@
-#!/bin/env python3.6
+#!/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6
 
 # Name: 3b-opt.py
 # Description: Script qui permet d'effectuer une sauvegarde sur N repertoires
@@ -95,7 +95,7 @@ for path_data in paths_to_save:
     if os.access(path_data, os.W_OK and os.R_OK):
 
         # On crée l'archive
-        shutil.make_archive('AHAHAH', 'gztar', save_directory)
+        shutil.make_archive(archive_name, 'gztar', save_directory)
 
         # On regarde si une ancienne save existe
         if os.path.exists(save_directory+'/'+archive_name+'.tar.gz'):
